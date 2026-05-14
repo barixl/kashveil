@@ -145,7 +145,7 @@
                     <a href="gallery.html" class="hover:text-brand-gold transition-colors">GALLERY</a>
 
                     <a href="contact.html"
-                        class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">BOOK
+                        class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">CONTACT
                         NOW</a>
                 </div>
 
@@ -161,20 +161,32 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="md:hidden bg-white shadow-xl border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-brand-green font-medium">HOME</a>
-                <a href="packages.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">OUR PACKAGES</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">ABOUT US</a>
-                <a href="gallery.html" class="block px-3 py-2 text-gray-800 hover:text-brand-gold">GALLERY</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-green font-bold">BOOK NOW</a>
+        <!-- Mobile Menu (Full Screen) -->
+        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
+            <div class="flex justify-between items-center h-24 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
+                <a href="index.html">
+                    <img class="h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
+                </a>
+                <button id="mobile-menu-close" class="text-gray-800 hover:text-brand-green focus:outline-none">
+                    <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-grow flex flex-col items-center justify-center space-y-8 px-4">
+                <a href="index.html" class="text-3xl font-serif text-brand-green font-bold tracking-wide">HOME</a>
+                <a href="packages.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">OUR PACKAGES</a>
+                <a href="about.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">ABOUT US</a>
+                <a href="gallery.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">GALLERY</a>
+                <div class="pt-8">
+                    <a href="contact.html" class="bg-brand-green text-white px-10 py-4 rounded-full font-bold text-xl shadow-xl hover:bg-brand-lightgreen transition-all transform active:scale-95">CONTACT NOW</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[100vh] w-full flex flex-col items-center justify-center pt-28 pb-12">
+    <section class="relative min-h-[80vh] md:min-h-[100vh] w-full flex flex-col items-center justify-center pt-40 md:pt-36 pb-12">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="static/images/dal-lake.jpg" alt="Dal Lake Kashmir" class="w-full h-full object-cover">
@@ -183,7 +195,7 @@
         </div>
 
         <!-- Content Container (Stacks text and cards) -->
-        <div class="relative z-10 w-full flex flex-col items-center gap-12 md:gap-20 mt-4 md:mt-8">
+        <div class="relative z-10 w-full flex flex-col items-center gap-40 md:gap-20 mt-4 md:mt-8">
             
             <!-- Hero Content -->
             <div class="text-center px-4 w-full max-w-5xl mx-auto">
@@ -347,12 +359,8 @@
 
             <div class="text-center mt-12">
                 <a href="packages.html"
-                    class="inline-flex items-center justify-center px-8 py-3 border-2 border-brand-green text-brand-green font-semibold rounded-full hover:bg-brand-green hover:text-white transition-all duration-300">
+                    class="inline-flex items-center justify-center px-10 py-4 bg-brand-green text-white font-bold rounded-full hover:bg-brand-lightgreen hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     View All Packages
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
                 </a>
             </div>
         </div>
@@ -417,37 +425,37 @@
                 <h2 class="text-4xl md:text-5xl font-serif text-brand-green font-bold leading-tight">Get To Know<br>About</h2>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <!-- Car Rentals -->
-                <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg cursor-pointer">
+                <div class="group relative h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                     <img src="static/images/car-rental.png" alt="Car Rentals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold tracking-widest uppercase">Car Rentals</h3>
+                        <h3 class="text-white text-sm sm:text-xl font-bold tracking-widest uppercase">Car Rentals</h3>
                     </div>
                 </div>
                 <!-- Accommodation -->
-                <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg cursor-pointer">
+                <div class="group relative h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                     <img src="static/images/accommodation.png" alt="Accommodation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold tracking-widest uppercase">Accommodation</h3>
+                        <h3 class="text-white text-sm sm:text-xl font-bold tracking-widest uppercase">Accommodation</h3>
                     </div>
                 </div>
                 <!-- Restaurants -->
-                <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg cursor-pointer">
+                <div class="group relative h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                     <img src="static/images/restaurant.png" alt="Restaurants" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold tracking-widest uppercase">Restaurants</h3>
+                        <h3 class="text-white text-sm sm:text-xl font-bold tracking-widest uppercase">Restaurants</h3>
                     </div>
                 </div>
                 <!-- Hospitals -->
-                <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg cursor-pointer">
+                <div class="group relative h-48 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg cursor-pointer">
                     <img src="static/images/hospital.png" alt="Hospitals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold tracking-widest uppercase">Hospitals</h3>
+                        <h3 class="text-white text-sm sm:text-xl font-bold tracking-widest uppercase">Hospitals</h3>
                     </div>
                 </div>
             </div>
@@ -459,7 +467,7 @@
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="static/images/mountain-land-horse.jpg" alt="Booking Process Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-brand-green/90 backdrop-blur-sm"></div>
+            <div class="absolute inset-0 bg-brand-green/70"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
@@ -534,13 +542,26 @@
                 </div>
             </div>
 
-            <div class="relative overflow-hidden w-full py-4">
-                <div class="absolute inset-y-0 left-0 w-8 md:w-32 bg-gradient-to-r from-[#fbf8f1] to-transparent z-10 pointer-events-none"></div>
-                <div class="absolute inset-y-0 right-0 w-8 md:w-32 bg-gradient-to-l from-[#fbf8f1] to-transparent z-10 pointer-events-none"></div>
+            <div class="relative group py-4">
+                <!-- Navigation Arrows (Desktop Only) -->
+                <button id="review-prev" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand-gold hover:text-white text-brand-green p-3 rounded-full shadow-xl hidden md:flex items-center justify-center transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="review-next" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand-gold hover:text-white text-brand-green p-3 rounded-full shadow-xl hidden md:flex items-center justify-center transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Gradient Overlays (Desktop Only) -->
+                <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-lightgold/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
+                <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-lightgold/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
                 
-                <div class="flex gap-8 w-max animate-marquee hover:cursor-pointer">
+                <div id="reviews-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar px-4 md:px-0">
                     <!-- Original Set of Reviews -->
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Our honeymoon in Kashmir was a dream come true. Kashveil handled every detail with such care. The houseboat stay was the highlight!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">AR</div>
@@ -550,7 +571,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"The Ladakh bike expedition was flawlessly organized. Great bikes, safe routes, and incredible local food. Simply the best!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">MK</div>
@@ -560,7 +581,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Professional, reliable, and very friendly. We traveled with kids and felt completely safe throughout the trip. Thank you, Kashveil!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">SP</div>
@@ -570,7 +591,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Breathtaking views and top-notch hospitality. The guides knew all the hidden gems in Pahalgam. Will definitely book again!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">DA</div>
@@ -580,7 +601,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Kashveil made our family vacation stress-free. The Gulmarg ski trip was an absolute blast for the kids!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">RJ</div>
@@ -591,57 +612,7 @@
                         </div>
                     </div>
 
-                    <!-- Duplicate Set for Seamless Marquee -->
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
-                        <p class="text-gray-600 italic mb-6">"Our honeymoon in Kashmir was a dream come true. Kashveil handled every detail with such care. The houseboat stay was the highlight!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">AR</div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Ananya & Rahul</h4>
-                                <p class="text-xs text-gray-500">Mumbai, India</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
-                        <p class="text-gray-600 italic mb-6">"The Ladakh bike expedition was flawlessly organized. Great bikes, safe routes, and incredible local food. Simply the best!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">MK</div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Mark Kovacs</h4>
-                                <p class="text-xs text-gray-500">Budapest, Hungary</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
-                        <p class="text-gray-600 italic mb-6">"Professional, reliable, and very friendly. We traveled with kids and felt completely safe throughout the trip. Thank you, Kashveil!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">SP</div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Sneha Patel</h4>
-                                <p class="text-xs text-gray-500">London, UK</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
-                        <p class="text-gray-600 italic mb-6">"Breathtaking views and top-notch hospitality. The guides knew all the hidden gems in Pahalgam. Will definitely book again!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">DA</div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">David & Anna</h4>
-                                <p class="text-xs text-gray-500">Sydney, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
-                        <p class="text-gray-600 italic mb-6">"Kashveil made our family vacation stress-free. The Gulmarg ski trip was an absolute blast for the kids!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">RJ</div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Rajiv Jain</h4>
-                                <p class="text-xs text-gray-500">Delhi, India</p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -756,25 +727,38 @@
                 <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold mb-4">Travel Highlights</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Get a glimpse of the paradise through our short video reels.</p>
             </div>
-            
-            <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar">
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/HqTrdD6MOzw" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/yCcqL9mKEI8" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/_uEYxf4J2Mo" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0OT-msOzTZA" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0ip6KLl7x8I" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="flex-shrink-0 w-[280px] h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
-                    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/GAo7Z5spTzQ" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="relative group">
+                <!-- Navigation Arrows (Desktop Only) -->
+                <button id="highlights-prev" class="absolute -left-6 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand-gold hover:text-white text-brand-green p-3 rounded-full shadow-xl hidden md:flex items-center justify-center transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="highlights-next" class="absolute -right-6 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand-gold hover:text-white text-brand-green p-3 rounded-full shadow-xl hidden md:flex items-center justify-center transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <div id="highlights-carousel" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar px-4 md:px-0">
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/HqTrdD6MOzw?autoplay=1&mute=1&loop=1&playlist=HqTrdD6MOzw" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/yCcqL9mKEI8?autoplay=1&mute=1&loop=1&playlist=yCcqL9mKEI8" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/_uEYxf4J2Mo?autoplay=1&mute=1&loop=1&playlist=_uEYxf4J2Mo" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0OT-msOzTZA?autoplay=1&mute=1&loop=1&playlist=0OT-msOzTZA" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0ip6KLl7x8I?autoplay=1&mute=1&loop=1&playlist=0ip6KLl7x8I" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/GAo7Z5spTzQ?autoplay=1&mute=1&loop=1&playlist=GAo7Z5spTzQ" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -816,6 +800,124 @@
                     class="inline-flex items-center justify-center px-8 py-3 bg-brand-green text-white font-semibold rounded-full hover:bg-brand-lightgreen transition-all duration-300 shadow-lg hover:shadow-xl">
                     View Full Gallery
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold mb-4">Connect With Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Follow our journey and join our community on social media for daily updates and travel inspiration.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/kashveil_tour_and_travels_?igsh=MXhiemNyOTFmaHA1ZQ%3D%3D&utm_source=qr" target="_blank" 
+                   class="group relative overflow-hidden rounded-2xl md:rounded-3xl p-4 sm:p-8 bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="bg-white/20 p-2 sm:p-4 rounded-xl sm:rounded-2xl mb-2 sm:mb-4 backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                            <svg class="w-6 h-6 sm:w-10 sm:h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-base sm:text-2xl font-bold mb-0.5 sm:mb-1">Instagram</h3>
+                        <p class="text-white/80 text-[10px] sm:text-sm mb-2 sm:mb-4 truncate w-full">@kashveil_tour_and_travels_</p>
+                        <span class="bg-white text-[#bc1888] px-3 sm:px-6 py-1 sm:py-2 rounded-full text-[10px] sm:text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">FOLLOW</span>
+                    </div>
+                </a>
+
+                <!-- Facebook Card -->
+                <a href="https://www.facebook.com/share/19wJAEKdkf/?mibextid=wwXIfr" target="_blank" 
+                   class="group relative overflow-hidden rounded-2xl md:rounded-3xl p-4 sm:p-8 bg-[#1877F2] text-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="bg-white/20 p-2 sm:p-4 rounded-xl sm:rounded-2xl mb-2 sm:mb-4 backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                            <svg class="w-6 h-6 sm:w-10 sm:h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-base sm:text-2xl font-bold mb-0.5 sm:mb-1">Facebook</h3>
+                        <p class="text-white/80 text-[10px] sm:text-sm mb-2 sm:mb-4 truncate w-full">Kashveil Holiday</p>
+                        <span class="bg-white text-[#1877F2] px-3 sm:px-6 py-1 sm:py-2 rounded-full text-[10px] sm:text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">CONNECT</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold mb-4">Plan Your Trip</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions? Our travel experts are ready to help you craft the perfect Kashmir experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                    <h2 class="text-2xl font-serif text-brand-green font-bold mb-6">Get In Touch</h2>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-3 border">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-3 border">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-3 border">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea rows="4" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-brand-green focus:ring-brand-green p-3 border" placeholder="Tell us about your travel plans..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-brand-green text-white font-bold py-4 rounded-lg hover:bg-brand-lightgreen transition-colors shadow-lg">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-serif text-brand-green font-bold mb-6">Contact Information</h2>
+                        <p class="text-gray-600 mb-8">Feel free to reach out to us for customized itineraries, bookings, or any inquiries regarding Kashmir and Ladakh tours.</p>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 text-brand-gold bg-brand-lightgold/30 p-3 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-900 font-serif">Office Address</h4>
+                            <p class="mt-1 text-gray-600">Srinagar, Jammu and Kashmir, India</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 text-brand-gold bg-brand-lightgold/30 p-3 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-900 font-serif">Phone Number</h4>
+                            <p class="mt-1 text-gray-600">+91 99068 91014 <br> +91 70068 69032</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 text-brand-gold bg-brand-lightgold/30 p-3 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-900 font-serif">Email Address</h4>
+                            <p class="mt-1 text-gray-600">Kashveilholiday@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -882,16 +984,26 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
+        const openBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
         const menu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
-                menu.style.maxHeight = '0px';
-            } else {
-                menu.style.maxHeight = menu.scrollHeight + 'px';
-            }
+        openBtn.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
         });
 
         // Navbar Scroll Effect
@@ -963,6 +1075,49 @@
                 }
             });
         });
+
+        // Reviews Carousel Navigation
+        const reviewsCarousel = document.getElementById('reviews-carousel');
+        const prevBtn = document.getElementById('review-prev');
+        const nextBtn = document.getElementById('review-next');
+
+        if (reviewsCarousel && prevBtn && nextBtn) {
+            const scrollAmount = 400; // Width of one review card
+
+            nextBtn.addEventListener('click', () => {
+                reviewsCarousel.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                reviewsCarousel.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Auto-swipe for mobile if desired, but user specifically asked for swipability
+            // The snap-x CSS handles the swipability perfectly.
+        }
+
+        // Highlights Carousel Navigation
+        const highlightsCarousel = document.getElementById('highlights-carousel');
+        const highlightsPrev = document.getElementById('highlights-prev');
+        const highlightsNext = document.getElementById('highlights-next');
+
+        if (highlightsCarousel && highlightsPrev && highlightsNext) {
+            const hScrollAmount = 300; 
+
+            highlightsNext.addEventListener('click', () => {
+                highlightsCarousel.scrollBy({ left: hScrollAmount, behavior: 'smooth' });
+            });
+
+            highlightsPrev.addEventListener('click', () => {
+                highlightsCarousel.scrollBy({ left: -hScrollAmount, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 
