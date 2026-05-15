@@ -98,11 +98,11 @@
     <!-- Navigation -->
         <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo: Centered on mobile, Left-aligned on desktop -->
+                <div class="flex-shrink-0 flex items-center md:static absolute left-1/2 transform -translate-x-1/2 md:translate-x-0">
                     <a href="index.html">
-                        <img class="h-20 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
+                        <img class="h-12 md:h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
                     </a>
                 </div>
 
@@ -153,8 +153,8 @@
                         NOW</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
+                <!-- Mobile menu button (remains on right) -->
+                <div class="md:hidden flex items-center ml-auto">
                     <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -548,9 +548,9 @@
                 <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-lightgold/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
                 <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-lightgold/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
                 
-                <div id="reviews-carousel" class="flex gap-6 overflow-x-hidden no-scrollbar px-4 md:px-0">
+                <div id="reviews-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar px-4 md:px-0 scroll-smooth">
                     <!-- Original Set of Reviews -->
-                    <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="reviews-card w-[85%] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Our honeymoon in Kashmir was a dream come true. Kashveil handled every detail with such care. The houseboat stay was the highlight!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">AR</div>
@@ -560,7 +560,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="reviews-card w-[85%] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"The Ladakh bike expedition was flawlessly organized. Great bikes, safe routes, and incredible local food. Simply the best!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">MK</div>
@@ -570,7 +570,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="reviews-card w-[85%] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Professional, reliable, and very friendly. We traveled with kids and felt completely safe throughout the trip. Thank you, Kashveil!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">SP</div>
@@ -580,7 +580,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="reviews-card w-[85%] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Breathtaking views and top-notch hospitality. The guides knew all the hidden gems in Pahalgam. Will definitely book again!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">DA</div>
@@ -590,7 +590,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
+                    <div class="reviews-card w-[85%] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0 snap-center">
                         <p class="text-gray-600 italic mb-6">"Kashveil made our family vacation stress-free. The Gulmarg ski trip was an absolute blast for the kids!"</p>
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-brand-lightgold rounded-full flex items-center justify-center text-brand-green font-bold mr-4">RJ</div>
@@ -600,6 +600,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                     
                     <!-- Duplicate Set for Seamless Marquee -->
                     <div class="reviews-card w-[300px] md:w-[400px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex-shrink-0">
@@ -1063,6 +1064,43 @@
                 window.open(whatsappUrl, '_blank');
             });
         }
+
+        // Reviews Carousel Logic
+        const carousel = document.getElementById('reviews-carousel');
+        const prevBtn = document.getElementById('review-prev');
+        const nextBtn = document.getElementById('review-next');
+
+        if (carousel && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const scrollAmount = carousel.offsetWidth < 768 ? carousel.offsetWidth : 424;
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+            prevBtn.addEventListener('click', () => {
+                const scrollAmount = carousel.offsetWidth < 768 ? carousel.offsetWidth : 424;
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        // FAQ Logic
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.faq-icon');
+                
+                // Toggle current FAQ
+                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    content.style.maxHeight = '0px';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close others
+                    document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                    document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
     </script>
 </body>
 </html>

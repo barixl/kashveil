@@ -44,68 +44,39 @@
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo: Centered on mobile, Left-aligned on desktop -->
+                <div class="flex-shrink-0 flex items-center md:static absolute left-1/2 transform -translate-x-1/2 md:translate-x-0">
                     <a href="index.html">
-                        <img class="h-20 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
+                        <img class="h-12 md:h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <div id="nav-links"
-                    class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
+                <div id="nav-links" class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
                     <a href="index.html" class="hover:text-brand-gold transition-colors">HOME</a>
-
                     <div class="relative group">
-                        <a href="packages.html" class="hover:text-brand-gold transition-colors flex items-center">
-                            OUR PACKAGES
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <!-- Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
+                        <a href="packages.html" class="hover:text-brand-gold transition-colors flex items-center">OUR PACKAGES <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                        <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
                             <div class="py-1">
-                                <a href="packages.html?cat=fun"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Fun
-                                    & Leisure</a>
-                                <a href="packages.html?cat=adventure"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Adventure
-                                    Tours</a>
-                                <a href="packages.html?cat=couples"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Couples
-                                    Special</a>
-                                <a href="packages.html?cat=honeymoon"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Honeymoon
-                                    Specials</a>
-                                <a href="packages.html?cat=family"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family
-                                    Vacations</a>
-                                <a href="packages.html?cat=ladakh"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Ladakh
-                                    Tours</a>
+                                <a href="packages.html?cat=fun" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Fun & Leisure</a>
+                                <a href="packages.html?cat=adventure" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Adventure Tours</a>
+                                <a href="packages.html?cat=couples" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Couples Special</a>
+                                <a href="packages.html?cat=honeymoon" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Honeymoon Specials</a>
+                                <a href="packages.html?cat=family" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family Vacations</a>
+                                <a href="packages.html?cat=ladakh" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Ladakh Tours</a>
                             </div>
                         </div>
                     </div>
-
                     <a href="about.html" class="hover:text-brand-gold transition-colors">ABOUT US</a>
                     <a href="gallery.html" class="hover:text-brand-gold transition-colors">GALLERY</a>
-
-                    <a href="contact.html"
-                        class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">CONTACT
-                        NOW</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">CONTACT NOW</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
+                <!-- Mobile menu button (remains on right) -->
+                <div class="md:hidden flex items-center ml-auto">
                     <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
