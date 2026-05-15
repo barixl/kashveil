@@ -725,25 +725,32 @@
                     </svg>
                 </button>
 
-                <div id="highlights-carousel" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar px-4 md:px-0">
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                <div id="highlights-carousel" class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar px-4 md:px-0 scroll-smooth">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/HqTrdD6MOzw?autoplay=1&mute=1&loop=1&playlist=HqTrdD6MOzw" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/yCcqL9mKEI8?autoplay=1&mute=1&loop=1&playlist=yCcqL9mKEI8" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/_uEYxf4J2Mo?autoplay=1&mute=1&loop=1&playlist=_uEYxf4J2Mo" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0OT-msOzTZA?autoplay=1&mute=1&loop=1&playlist=0OT-msOzTZA" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0ip6KLl7x8I?autoplay=1&mute=1&loop=1&playlist=0ip6KLl7x8I" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="flex-shrink-0 w-[160px] md:w-[280px] h-[284px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <div class="flex-shrink-0 w-[240px] md:w-[280px] h-[426px] md:h-[500px] snap-center rounded-2xl overflow-hidden shadow-lg bg-black">
                         <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/GAo7Z5spTzQ?autoplay=1&mute=1&loop=1&playlist=GAo7Z5spTzQ" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
+                </div>
+
+                <!-- Mobile Swipe Hint -->
+                <div class="flex justify-center space-x-2 mt-4 md:hidden">
+                    <div class="w-2 h-2 rounded-full bg-brand-green"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300"></div>
                 </div>
             </div>
         </div>
@@ -1023,6 +1030,22 @@
             prevBtn.addEventListener('click', () => {
                 const scrollAmount = carousel.offsetWidth < 768 ? carousel.offsetWidth : 424;
                 carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        // Highlights Carousel Logic
+        const hCarousel = document.getElementById('highlights-carousel');
+        const hPrevBtn = document.getElementById('highlights-prev');
+        const hNextBtn = document.getElementById('highlights-next');
+
+        if (hCarousel && hPrevBtn && hNextBtn) {
+            hNextBtn.addEventListener('click', () => {
+                const scrollAmount = hCarousel.offsetWidth < 768 ? 256 : 300;
+                hCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+            hPrevBtn.addEventListener('click', () => {
+                const scrollAmount = hCarousel.offsetWidth < 768 ? 256 : 300;
+                hCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
         }
 
