@@ -10,12 +10,10 @@
     <link rel="manifest" href="static/images/favicons/site.webmanifest">
     <link rel="shortcut icon" href="static/images/favicons/favicon.ico">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,129 +21,67 @@
                 extend: {
                     colors: {
                         brand: {
-                            green: '#1b4332',
-                            lightgreen: '#2d6a4f',
-                            gold: '#d4af37',
-                            lightgold: '#f3e5ab'
+                            green: '#1b4332', lightgreen: '#2d6a4f', gold: '#d4af37', lightgold: '#f3e5ab'
                         }
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
-        }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%); }
         .nav-text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html">
-                        <img class="h-20 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
-                    </a>
+                    <a href="index.html"><img class="h-20 w-auto" src="static/images/logo.png" alt="Kashveil Logo"></a>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div id="nav-links"
-                    class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
+                <div id="nav-links" class="hidden md:flex space-x-8 items-center font-medium text-sm lg:text-base text-white nav-text-shadow">
                     <a href="index.html" class="hover:text-brand-gold transition-colors">HOME</a>
-
                     <div class="relative group">
-                        <a href="packages.html" class="hover:text-brand-gold transition-colors flex items-center font-bold">
-                            OUR PACKAGES
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <!-- Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
+                        <a href="packages.html" class="hover:text-brand-gold transition-colors flex items-center font-bold">OUR PACKAGES <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                        <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
                             <div class="py-1">
-                                <a href="packages.html?cat=fun"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Fun
-                                    & Leisure</a>
-                                <a href="packages.html?cat=adventure"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Adventure
-                                    Tours</a>
-                                <a href="packages.html?cat=couples"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Couples
-                                    Special</a>
-                                <a href="packages.html?cat=honeymoon"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Honeymoon
-                                    Specials</a>
-                                <a href="packages.html?cat=family"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family
-                                    Vacations</a>
-                                <a href="packages.html?cat=ladakh"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Ladakh
-                                    Tours</a>
+                                <a href="packages.html?cat=fun" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Fun & Leisure</a>
+                                <a href="packages.html?cat=adventure" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Adventure Tours</a>
+                                <a href="packages.html?cat=couples" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Couples Special</a>
+                                <a href="packages.html?cat=honeymoon" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Honeymoon Specials</a>
+                                <a href="packages.html?cat=family" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Family Vacations</a>
+                                <a href="packages.html?cat=ladakh" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-gold">Ladakh Tours</a>
                             </div>
                         </div>
                     </div>
-
                     <a href="about.html" class="hover:text-brand-gold transition-colors">ABOUT US</a>
                     <a href="gallery.html" class="hover:text-brand-gold transition-colors">GALLERY</a>
-
-                    <a href="contact.html"
-                        class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen hover:shadow-lg transition-all duration-300 border border-brand-green">CONTACT
-                        NOW</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-6 py-2 rounded-full hover:bg-brand-lightgreen transition-all duration-300 border border-brand-green">CONTACT NOW</a>
                 </div>
-
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu (Full Screen) -->
-        <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
-            <div class="flex justify-between items-center h-24 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
-                <a href="index.html">
-                    <img class="h-16 w-auto" src="static/images/logo.png" alt="Kashveil Logo">
-                </a>
-                <button id="mobile-menu-close" class="text-gray-800 hover:text-brand-green focus:outline-none">
-                    <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="flex-grow flex flex-col items-center justify-center space-y-8 px-4">
-                <a href="index.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">HOME</a>
-                <a href="packages.html" class="text-3xl font-serif text-brand-green font-bold tracking-wide">OUR PACKAGES</a>
-                <a href="about.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">ABOUT US</a>
-                <a href="gallery.html" class="text-3xl font-serif text-gray-800 hover:text-brand-gold tracking-wide transition-colors">GALLERY</a>
-                <div class="pt-8">
-                    <a href="contact.html" class="bg-brand-green text-white px-10 py-4 rounded-full font-bold text-xl shadow-xl hover:bg-brand-lightgreen transition-all transform active:scale-95">CONTACT NOW</a>
-                </div>
+        <div id="mobile-menu" class="md:hidden bg-white overflow-hidden transition-all duration-500 ease-in-out border-b border-gray-100" style="max-height: 0px;">
+            <div class="px-4 pt-4 pb-8 space-y-4">
+                <a href="index.html" class="block text-xl font-medium text-brand-green">HOME</a>
+                <a href="packages.html" class="block text-xl font-medium text-gray-800">OUR PACKAGES</a>
+                <a href="about.html" class="block text-xl font-medium text-gray-800">ABOUT US</a>
+                <a href="gallery.html" class="block text-xl font-medium text-gray-800">GALLERY</a>
+                <a href="contact.html" class="block text-center bg-brand-green text-white px-6 py-4 rounded-xl font-bold text-lg">CONTACT NOW</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <header class="relative h-[50vh] min-h-[400px] flex items-center justify-center pt-24">
         <div class="absolute inset-0 z-0">
             <img src="static/images/dal-lake-2.jpg" alt="All Packages" class="w-full h-full object-cover">
@@ -157,11 +93,8 @@
         </div>
     </header>
 
-    <!-- Filter & Grid -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Category Filters -->
             <div class="flex flex-wrap justify-center gap-4 mb-12 filter-buttons">
                 <button data-filter="all" class="filter-btn px-6 py-2 rounded-full bg-brand-green text-white font-medium shadow-md">All Packages</button>
                 <button data-filter="fun" class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 hover:bg-brand-lightgold/50 transition-colors font-medium border border-gray-100">Fun & Leisure</button>
@@ -171,7 +104,6 @@
                 <button data-filter="ladakh" class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 hover:bg-brand-lightgold/50 transition-colors font-medium border border-gray-100">Ladakh</button>
             </div>
 
-            <!-- Packages Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Package 1: Fun & Leisure -->
                 <div data-category="fun" class="package-item bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col">
@@ -184,11 +116,8 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Pahalgam Retreat</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">A refreshing getaway to the valley of shepherds, perfect for short breaks and nature lovers.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹15,000</span>
-                            </div>
-                            <a href="contact.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">Book Now</a>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹15,000</span></div>
+                            <a href="pahalgam-retreat.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -204,10 +133,7 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Skiing in Gulmarg</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">Experience the thrill of the highest gondola ride and world-class skiing slopes.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹18,500</span>
-                            </div>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹18,500</span></div>
                             <a href="gulmarg-adventure.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
@@ -224,10 +150,7 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Srinagar Shikara Stay</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">Romantic stay on a premium houseboat with private shikara tours on Dal Lake.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹19,000</span>
-                            </div>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹19,000</span></div>
                             <a href="romantic-kashmir.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
@@ -244,10 +167,7 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Premium Honeymoon Escape</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">Celebrate your union with candle-light dinners, private tours, and the most scenic stays.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹24,500</span>
-                            </div>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹24,500</span></div>
                             <a href="romantic-kashmir.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
@@ -264,10 +184,7 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Kashmir Family Tour</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">A comprehensive tour covering Srinagar, Gulmarg, Pahalgam, and Sonamarg for the whole family.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹32,000</span>
-                            </div>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹32,000</span></div>
                             <a href="kashmir-family-tour.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
@@ -284,10 +201,7 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-2 font-serif">Ladakh Expedition</h3>
                         <p class="text-gray-600 text-sm mb-4 line-clamp-2">Journey through the land of high passes, featuring Leh, Nubra Valley, and the stunning Pangong Lake.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100 mt-auto">
-                            <div>
-                                <span class="text-xs text-gray-500 block">Starting from</span>
-                                <span class="text-lg font-bold text-brand-green">₹45,000</span>
-                            </div>
+                            <div><span class="text-xs text-gray-500 block">Starting from</span><span class="text-lg font-bold text-brand-green">₹45,000</span></div>
                             <a href="ladakh-bike-expedition.html" class="px-5 py-2 bg-brand-green text-white text-sm font-medium rounded-full hover:bg-brand-lightgreen transition-colors">View Details</a>
                         </div>
                     </div>
@@ -296,49 +210,6 @@
         </div>
     </section>
 
-    <!-- Social Connect Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold mb-4">Connect With Us</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Follow our journey and join our community on social media for daily updates and travel inspiration.</p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-                <!-- Instagram Card -->
-                <a href="https://www.instagram.com/kashveil_tour_and_travels_?igsh=MXhiemNyOTFmaHA1ZQ%3D%3D&utm_source=qr" target="_blank" 
-                   class="group relative overflow-hidden rounded-2xl md:rounded-3xl p-4 sm:p-8 bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative z-10 flex flex-col items-center text-center">
-                        <div class="bg-white/20 p-2 sm:p-4 rounded-xl sm:rounded-2xl mb-2 sm:mb-4 backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
-                            <svg class="w-6 h-6 sm:w-10 sm:h-10" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-2xl font-bold mb-0.5 sm:mb-1">Instagram</h3>
-                        <p class="text-white/80 text-[10px] sm:text-sm mb-2 sm:mb-4 truncate w-full">@kashveil_tour_and_travels_</p>
-                        <span class="bg-white text-[#bc1888] px-3 sm:px-6 py-1 sm:py-2 rounded-full text-[10px] sm:text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">FOLLOW</span>
-                    </div>
-                </a>
-
-                <!-- Facebook Card -->
-                <a href="https://www.facebook.com/share/19wJAEKdkf/?mibextid=wwXIfr" target="_blank" 
-                   class="group relative overflow-hidden rounded-2xl md:rounded-3xl p-4 sm:p-8 bg-[#1877F2] text-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative z-10 flex flex-col items-center text-center">
-                        <div class="bg-white/20 p-2 sm:p-4 rounded-xl sm:rounded-2xl mb-2 sm:mb-4 backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
-                            <svg class="w-6 h-6 sm:w-10 sm:h-10" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-base sm:text-2xl font-bold mb-0.5 sm:mb-1">Facebook</h3>
-                        <p class="text-white/80 text-[10px] sm:text-sm mb-2 sm:mb-4 truncate w-full">Kashveil Holiday</p>
-                        <span class="bg-white text-[#1877F2] px-3 sm:px-6 py-1 sm:py-2 rounded-full text-[10px] sm:text-sm font-bold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">CONNECT</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="bg-brand-green text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -359,100 +230,72 @@
                     <h4 class="text-brand-gold font-serif text-xl mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-gray-300">
                         <li>Srinagar, Jammu and Kashmir</li>
-                        <li>Phone: 7006869032 / 9906891014</li>
-                        <li>Email: Kashveilholiday@gmail.com</li>
+                        <li>Phone: <a href="tel:9906891014" class="hover:text-brand-gold transition-colors">9906891014</a></li>
+                        <li>Email: <a href="mailto:Kashveilholiday@gmail.com" class="hover:text-brand-gold transition-colors">Kashveilholiday@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/20 mt-12 pt-8 text-center text-sm text-gray-400">
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>&copy; 2026 Kashveil Tour and Travels. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://www.facebook.com/people/Kaahveil-Travels/61577524748230/" target="_blank" class="hover:text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/kashveiltours?igsh=Zng1NDk4ZGtodTVz" target="_blank" class="hover:text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/917006869032" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center">
+    <a href="https://wa.me/919906891014" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
     </a>
 
     <script>
-        const openBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
-
-        openBtn.addEventListener('click', () => {
-            menu.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            menu.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-        });
-
-        const menuLinks = menu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('translate-x-full');
-                document.body.style.overflow = '';
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') { mobileMenu.style.maxHeight = '0px'; }
+                else { mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px'; }
             });
-        });
-
-        // Navbar Scroll Effect
+        }
         const navbar = document.getElementById('navbar');
         const navLinks = document.getElementById('nav-links');
         const mobileBtn = document.getElementById('mobile-menu-btn');
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('glass-nav');
-                navbar.classList.remove('bg-transparent', 'py-2');
-                navbar.classList.add('py-1');
-                navLinks.classList.remove('text-white', 'nav-text-shadow');
-                navLinks.classList.add('text-gray-800');
-                mobileBtn.classList.remove('text-white', 'nav-text-shadow');
-                mobileBtn.classList.add('text-gray-800');
+                navbar.classList.add('glass-nav'); navbar.classList.remove('bg-transparent', 'py-2'); navbar.classList.add('py-1');
+                navLinks.classList.remove('text-white', 'nav-text-shadow'); navLinks.classList.add('text-gray-800');
+                mobileBtn.classList.remove('text-white', 'nav-text-shadow'); mobileBtn.classList.add('text-gray-800');
             } else {
-                navbar.classList.remove('glass-nav');
-                navbar.classList.add('bg-transparent', 'py-2');
-                navbar.classList.remove('py-1');
-                navLinks.classList.add('text-white', 'nav-text-shadow');
-                navLinks.classList.remove('text-gray-800');
-                mobileBtn.classList.add('text-white', 'nav-text-shadow');
-                mobileBtn.classList.remove('text-gray-800');
+                navbar.classList.remove('glass-nav'); navbar.classList.add('bg-transparent', 'py-2'); navbar.classList.remove('py-1');
+                navLinks.classList.add('text-white', 'nav-text-shadow'); navLinks.classList.remove('text-gray-800');
+                mobileBtn.classList.add('text-white', 'nav-text-shadow'); mobileBtn.classList.remove('text-gray-800');
             }
         });
-
-        // Trigger scroll event on load to set initial state
         window.dispatchEvent(new Event('scroll'));
-
-        // Package Filtering Logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const catParam = urlParams.get('cat');
+        if (catParam) {
+            const targetBtn = document.querySelector(`.filter-btn[data-filter="${catParam}"]`);
+            if (targetBtn) { targetBtn.click(); }
+        }
         const filterBtns = document.querySelectorAll('.filter-btn');
         const packageItems = document.querySelectorAll('.package-item');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active button styles
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-brand-green', 'text-white', 'shadow-md');
-                    b.classList.add('bg-white', 'text-gray-600', 'border-gray-100');
-                });
-                btn.classList.add('bg-brand-green', 'text-white', 'shadow-md');
-                btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-100');
-
-                // Filter items
+                filterBtns.forEach(b => { b.classList.remove('bg-brand-green', 'text-white', 'shadow-md'); b.classList.add('bg-white', 'text-gray-600', 'border-gray-100'); });
+                btn.classList.add('bg-brand-green', 'text-white', 'shadow-md'); btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-100');
                 const filter = btn.getAttribute('data-filter');
                 packageItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) { item.style.display = 'flex'; }
+                    else { item.style.display = 'none'; }
                 });
             });
         });
     </script>
 </body>
 </html>
-
-
